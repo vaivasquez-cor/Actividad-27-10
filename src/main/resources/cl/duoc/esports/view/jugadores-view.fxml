@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="439.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cl.duoc.esports.controller.JugadorController">
+    <center>
+        <Pane prefHeight="400.0" prefWidth="519.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="labelEsportM" layoutX="30.0" layoutY="32.0" text="eSport Manager">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="30.0" layoutY="49.0" text="Gestión de jugadores">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labelRegistro" layoutX="30.0" layoutY="84.0" text="Registro de jugadores" />
+                <Label fx:id="labelNikname" layoutX="30.0" layoutY="123.0" text="Nickname" />
+                <Label fx:id="labelVideojuego" layoutX="266.0" layoutY="123.0" text="Videojuego" />
+                <Label fx:id="labelNivel" layoutX="27.0" layoutY="187.0" text="Nivel" />
+                <Label fx:id="labelTipoJ" layoutX="266.0" layoutY="187.0" text="Tipo de jugador" />
+                <Button fx:id="buttonRegistro" layoutX="40.0" layoutY="334.0" mnemonicParsing="false" onAction="#agregarJugador" style="-fx-background-color: black;" text="+ Registrar" textFill="WHITE" />
+                <Button fx:id="buttonEliminar" layoutX="142.0" layoutY="334.0" mnemonicParsing="false" onAction="#eliminarJugador" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: gray;" text="Eliminar" textFill="#bfbfbf" />
+                <ComboBox fx:id="comboBoxVideojuego" layoutX="266.0" layoutY="140.0" prefWidth="150.0" />
+                <ComboBox fx:id="comboBoxTipoJ" layoutX="266.0" layoutY="209.0" prefWidth="150.0" />
+                <TextField fx:id="textFieldNickname" layoutX="30.0" layoutY="139.0" promptText="Nombre del jugador" />
+                <TextField fx:id="textFieldNivel" layoutX="30.0" layoutY="209.0" promptText="Ej.: 45" />
+            <TableView fx:id="tableViewRegistros" layoutX="69.0" layoutY="367.0" prefHeight="200.0" prefWidth="301.0">
+              <columns>
+                <TableColumn fx:id="tableColumnNickname" prefWidth="75.0" text="Nickname" />
+                <TableColumn fx:id="tableColumnVideojuego" prefWidth="75.0" text="Videojuego" />
+                  <TableColumn fx:id="tableColumnNivel" prefWidth="75.0" text="Nivel" />
+                  <TableColumn fx:id="tableColumnPuntos" prefWidth="75.0" text="Puntos" />
+              </columns>
+            </TableView>
+            <TextField fx:id="textFieldVP" disable="true" layoutX="30.0" layoutY="274.0" prefHeight="25.0" prefWidth="253.0" />
+            <Label fx:id="labelVP" layoutX="30.0" layoutY="251.0" text="Cantidad de victorias/Partidas jugadas" />
+            <Label fx:id="labelMensaje" layoutX="26.0" layoutY="576.0" prefHeight="17.0" prefWidth="364.0" textFill="#ff1818" />
+            </children>
+        </Pane>
+    </center>
+</BorderPane>
